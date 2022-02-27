@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>ShareScription-Create</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900">
@@ -14,39 +13,53 @@
     <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
 </head>
-
-<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56" style="background: linear-gradient(#7028e4, #e5b2ca), transparent;">
-    <main>
-        <section class="contact-clean" style="background: linear-gradient(#7028e4, #e5b2ca 100%);">
-            <form method="post">
-                <h2 class="text-center">Create Payment Link</h2>
-                <div class="mb-3"><input class="form-control" type="text" name="apiKey" placeholder="Stripe API key" required=""></div>
-                <div class="mb-3"><input class="form-control" type="text" name="name" placeholder="Product Name" required=""><small class="form-text text-danger">Please enter a correct email address.<input class="form-control" type="text" name="price" placeholder="Price (monthly)" required=""></small></div><input class="form-control is-invalid" type="email" name="number" placeholder="Shared number of people" required="">
-                <div class="mb-3"></div>
-                <div class="mb-3"><button class="btn btn-primary" type="button">作成</button></div>
-            </form>
-            <div class="bg-light border rounded border-light jumbotron py-5 px-4" style="width: 500px;margin-left: 450px;margin-top: 50px;">
-                <h1>Payment Link is created !</h1>
-                <p>https://~~~~</p>
-                <p><a class="btn btn-info btn-lg" role="button" href="#">リンクをコピー</a></p>
-            </div>
-        </section>
-    </main>
-    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav-1">
-        <div class="container"><a class="navbar-brand" href="#page-top" style="font-family: Muli;color: rgb(252,252,252);font-size: 24px;font-weight: bold;"><img src="assets/img/share.png" style="width: 25px;">&nbsp;Share Scription</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive-1">
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="56" style="background: linear-gradient(#7028e4, #e5b2ca);">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html" style="font-family: Muli;color: rgb(252,252,252);font-size: 24px;font-weight: bold;">
+                <img src="assets/img/share.png" style="width: 25px;">&nbsp;Share Scription</a>
+                <button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler float-end" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars">
+                    </i>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"></li>
-                    <li class="nav-item"><a class="nav-link" href="#features" style="color: rgba(255,255,255,0.55);">HOW TO USE</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact" style="color: rgba(255,255,255,0.55);">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">HOW TO USE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <main class="pt-5">
+        <section id="createForm" class="contact-clean" style="background-color: transparent;">
+            <form method="post">
+                <div class="mb-4 mt-5">
+                    <input class="form-control" type="text" name="apiKey" placeholder="Stripe API key" required="">
+                </div>
+                <div class="mb-4">
+                    <input class="form-control" type="text" name="name" placeholder="Product Name" required="">
+                  </div>
+                <div class="mb-4">
+                    <input class="form-control" type="text" name="price" placeholder="Price (monthly)" required="">    
+                </div>
+                 <div class="mb-4">
+                    <input class="form-control" type="email" name="number" placeholder="Shared number of people" required="">
+                </div>
+                <div class="mb-4">
+                    <button class="btn btn-primary" id="btn-one" type="button">Create</button>
+                </div>
+            </form>
+            <div id="resultDiv" class="bg-light border rounded border-light jumbotron py-5 px-4 mt-5" style="width: 480px;margin : 0 auto; display: none;">
+                <h1>Payment Link is created !</h1>
+                <p id="result"></p>
+                <p><a class="btn btn-info btn-lg" role="button" href="#">Copy Link</a></p>
+            </div>
+        </section>
+    </main>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/button.js"></script>
     <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/create.js"></script>
     <script src="assets/js/new-age.js"></script>
 </body>
-
 </html>
